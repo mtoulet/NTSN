@@ -1,0 +1,7 @@
+poster, 11 POST, 0N  UTILISATEUR
+UTILISATEUR : code utilisateur, rôle, prénom, nom, mdp, pseudo, email, description
+rédiger, 0N UTILISATEUR, 11 COMMENTAIRE
+
+POST : code poste, titre, description, image, date
+commenter, 0N POST, 11  COMMENTAIRE
+COMMENTAIRE : code commentaire, texte, date

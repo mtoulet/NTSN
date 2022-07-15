@@ -3,7 +3,7 @@ const sequelize = require('../database');
 
 class Comment extends Sequelize.Model {};
 
-Comment.init({
+Post.init({
 
   title: {
     type: DataTypes.STRING(100),

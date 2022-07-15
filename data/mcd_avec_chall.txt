@@ -1,0 +1,19 @@
+POST : code poste, titre, description, image, date
+commenter, 0N POST, 11  COMMENTAIRE
+COMMENTAIRE : code commentaire, texte, date
+DIFFICULTÉ : code difficulté, nom, point
+
+poster, 11 POST, 0N  UTILISATEUR
+relayer, 11 UTILISATEUR, 0N POST
+rédiger, 0N UTILISATEUR, 11 COMMENTAIRE
+définir, 11 CHALLENGE, 0N DIFFICULTÉ
+
+lier, 0N UTILISATEUR, 11 RELATION
+UTILISATEUR : code utilisateur, rôle, prénom, nom, mdp, pseudo, email, description
+créer, 0N UTILISATEUR, 11 CHALLENGE
+CATÉGORIE : code catégorie, nom
+
+RELATION: code relation, utilisateur, autre utilisateur, type
+réussir, 0N UTILISATEUR, 0N CHALLENGE
+CHALLENGE : code challenge, titre, énoncé, code, solution,
+posséder, 1N CHALLENGE, 0N CATÉGORIE

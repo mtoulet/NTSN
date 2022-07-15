@@ -7,7 +7,7 @@ const Comment = require('./comment');
 
 User.hasMany(Comment,{
   foreignKey: 'comment_id',
-  as:"comment"
+  as:"comments"
 });
 Comment.belongsTo(User,{
   foreignKey: 'comment_id',
@@ -16,7 +16,7 @@ Comment.belongsTo(User,{
 
 User.hasMany(Post,{
   foreignKey: 'post_id',
-  as: "post",
+  as: "posts",
 });
 Post.belongsTo(User,{
   foreignKey: 'post_id',
@@ -25,7 +25,7 @@ Post.belongsTo(User,{
 
 Post.hasMany(Comment,{
   foreignKey: 'comment_id',
-  as  : "comment",
+  as  : "comments",
 })
 Comment.belongsTo(Post,{
   foreignKey: 'comment_id',
