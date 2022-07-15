@@ -4,13 +4,13 @@ const sequelize = require('../database');
 class Comment extends Sequelize.Model {};
 
 Comment.init({
-  name: {
+  content: {
     type: DataTypes.STRING,
     allowNull: false
   }
 }, {
   sequelize,
-  tableName: "Comment"
+  tableName: "comment"
 });
 
 
