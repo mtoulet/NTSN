@@ -15,6 +15,14 @@ app.use(express.static(path.join(__dirname, './assets')))
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
+app.use(
+    session({
+        saveUninitialized: true,
+        resave: true,
+        secret: 'Un secret pour signer les id de sessions',
+    })
+);
+
 app.use(router);
 
 

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../database');
 
-class Comment extends Sequelize.Model {};
+class Post extends Sequelize.Model {};
 
 Post.init({
 
@@ -15,8 +15,8 @@ Post.init({
   }
 }, {
   sequelize,
-  tableName: "comment"
+  tableName: "post"
 });
 
 
-module.exports = Comment;
+module.exports = Post;
